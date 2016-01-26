@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AdvancedOperations\UploadOfflineConversions.cs" />
     <Compile Include="AdWordsBase.cs" />
+    <Compile Include="BasicOperations\GetCampaigns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

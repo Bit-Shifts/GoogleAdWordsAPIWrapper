@@ -16,7 +16,7 @@ namespace GoogleAdWordsAPI
 
         #endregion
 
-        public AdWordsBase(string clientCustomerId, string userAgent, string developerToken, string oAuth2ClientId, string oAuth2ClientSecret, string oAuth2RefreshToken, string oAuth2Mode)
+        public AdWordsBase(string clientCustomerId, string userAgent, string developerToken, string oAuth2ClientId, string oAuth2ClientSecret, string oAuth2RefreshToken)
         {
             User = new AdWordsUser();
 
