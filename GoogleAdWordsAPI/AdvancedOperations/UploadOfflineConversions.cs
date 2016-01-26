@@ -9,16 +9,16 @@ namespace GoogleAdWordsAPI.AdvancedOperations
 {
     public class UploadOfflineConversions : AdWordsBase
     {
-        public UploadOfflineConversions(string clientCustomerId, string userAgent, string developerToken, string oAuth2ClientId, string oAuth2ClientSecret, string oAuth2RefreshToken, string oAuth2Mode)
-            : base(clientCustomerId, userAgent, developerToken, oAuth2ClientId, oAuth2ClientSecret, oAuth2RefreshToken, oAuth2Mode) { }
+        public UploadOfflineConversions(string clientCustomerId, string userAgent, string developerToken, string oAuth2ClientId, string oAuth2ClientSecret, string oAuth2RefreshToken)
+            : base(clientCustomerId, userAgent, developerToken, oAuth2ClientId, oAuth2ClientSecret, oAuth2RefreshToken) { }
 
-        public OfflineConversionFeedReturnValue UploadOfflineConversionsToExistingConversionType(AdWordsUser user, List<OfflineConversionFeed> offlineConversions)
+        public OfflineConversionFeedReturnValue UploadOfflineConversionsToExistingConversionType(List<OfflineConversionFeed> offlineConversions)
         {
             try
             {
                 // Get the OfflineConversionFeedService.
                 OfflineConversionFeedService offlineConversionFeedService =
-                    (OfflineConversionFeedService)user.GetService(
+                    (OfflineConversionFeedService)User.GetService(
                         AdWordsService.v201509.OfflineConversionFeedService);
 
                 List<OfflineConversionFeedOperation> offlineConversionOperations = new List<OfflineConversionFeedOperation>();
